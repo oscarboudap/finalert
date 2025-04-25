@@ -1,9 +1,10 @@
 package types
 
 type Alert struct {
-	ID        string  // ID único de la alerta
-	Symbol    string  // "bitcoin", "ethereum", etc.
-	Operator  string  // "<", ">", "=="
-	Value     float64 // Umbral de precio
-	Triggered bool    // Se activó ya o no
+	ID        string  `json:"id"`
+	Symbol    string  `json:"symbol"`
+	Operator  string  `json:"operator"` // "<", ">", "=="
+	Value     float64 `json:"value"`
+	Triggered bool    `json:"triggered"`
+	Channel   string  `json:"channel"` // "console", "telegram", "email", etc.
 }
